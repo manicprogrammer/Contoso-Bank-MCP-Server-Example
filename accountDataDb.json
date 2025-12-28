@@ -1,0 +1,18 @@
+{
+  "ACCOUNTS": [
+    { "id": 1, "accountNumber": "123456789", "accountType": 1, "customerId": 1, "balance": 1000 },
+    { "id": 2, "accountNumber": "987654321", "accountType": 2, "customerId": 1, "balance": 2500 },
+    { "id": 3, "accountNumber": "456789123", "accountType": 3, "customerId": 2, "balance": 100 },
+    { "id": 4, "accountNumber": "789123456", "accountType": 2, "customerId": 3, "balance": 10000 }
+  ],
+  "CUSTOMERS": [
+    { "id": 1, "name": "Alice", "email": "alice@example.com" },
+    { "id": 2, "name": "Bob", "email": "bob@example.com" },
+    { "id": 3, "name": "Charlie", "email": "charlie@example.com" }
+  ],
+  "ACCOUNT_TYPES": [
+    { "id": 1, "code": "CheckingPersonal", "description": "Personal Checking Account" },
+    { "id": 2, "code": "SavingsHY", "description": "High Yield Savings Account" },
+    { "id": 3, "code": "CheckingPlus", "description": "Plus Checking Account" }
+  ]
+}
