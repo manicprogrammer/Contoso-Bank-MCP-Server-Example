@@ -1,4 +1,3 @@
-import asyncio
 import pytest
 from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
@@ -8,12 +7,14 @@ SERVER_PATH = ".\\main.py"
 EXPECTED_TOOLS = [
     "get_customer_info_by_id",
     "get_customer_info_by_email",
+    "get_account_info_by_id",
+    "get_accounts_by_customer_id",
 ]
 
 
 @pytest.mark.asyncio
 async def test_mcp_server_tools_list():
-    """Connect to an MCP server and verify the tools"""
+    """Connect to an MCP server and verify the list of tools"""
 
     # manage async contexts versus using nested async with statements
     exit_stack = AsyncExitStack()
