@@ -74,7 +74,7 @@ async def get_accounts_by_customer_id(customer_id: int):
     account_types_df = account_types_df.rename(columns={"id": "accountType_Id"})
     merged_df = pd.merge(merged_df, account_types_df, left_on="accountType", right_on="accountType_Id")
     accounts_info = merged_df.to_json(orient='records', indent=None)
-    
+
     if not accounts_info:
         return "No accounts found for that customer Id."
 

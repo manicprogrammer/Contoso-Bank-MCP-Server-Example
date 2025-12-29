@@ -67,7 +67,7 @@ async def test_get_customer_info_by_id():
 @pytest.mark.asyncio
 async def test_get_customer_info_by_email():
     """Connect to an MCP server retrieve the customer info by email"""
-    
+
     customer_email = "alice@example.com"
 
     mcp_session, exit_stack = await get_mcp_session_exit_stack()
@@ -80,10 +80,11 @@ async def test_get_customer_info_by_email():
 
     await exit_stack.aclose()
 
+
 @pytest.mark.asyncio
 async def test_get_account_info_by_id():
     """Connect to an MCP server retrieve the customer info by email"""
-    
+
     account_id = 1
 
     mcp_session, exit_stack = await get_mcp_session_exit_stack()
