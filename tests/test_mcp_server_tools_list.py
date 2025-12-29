@@ -3,12 +3,17 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
+
 SERVER_PATH = ".\\main.py"
+SERVER_PARAMS = StdioServerParameters(
+    command="python", args=[SERVER_PATH]
+)
 EXPECTED_TOOLS = [
     "get_customer_info_by_id",
     "get_customer_info_by_email",
     "get_account_info_by_id",
     "get_accounts_by_customer_id",
+    "get_account_types",
 ]
 
 
@@ -19,13 +24,9 @@ async def test_mcp_server_tools_list():
     # manage async contexts versus using nested async with statements
     exit_stack = AsyncExitStack()
 
-    server_params = StdioServerParameters(
-        command="python", args=[SERVER_PATH]
-    )
-
     # start the stdio client using the server parameters
     stdio_transport = await exit_stack.enter_async_context(
-        stdio_client(server_params)
+        stdio_client(SERVER_PARAMS)
     )
     stdio, write = stdio_transport
 
