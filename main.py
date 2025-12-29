@@ -2,7 +2,7 @@ import pandas as pd
 from mcp.server.fastmcp import FastMCP
 from accountDataDb import ACCOUNTS, CUSTOMERS, ACCOUNT_TYPES
 
-mcp = FastMCP("banking-account-info", instructions="Retrieve banking account information for customers")
+mcp = FastMCP("banking-account-info", instructions="Retrieve banking account information for customers of Contoso Bank.")
 
 
 @mcp.tool()
