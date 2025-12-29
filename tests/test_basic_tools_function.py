@@ -52,7 +52,7 @@ SERVER_PARAMS = StdioServerParameters(
 
 @pytest.mark.asyncio
 async def test_get_customer_info_by_id():
-    """Connect to an MCP server retrieve the fist customer info"""
+    """Retrieve the fist customer info using the appropriate tool function"""
 
     customer_id = 1
 
